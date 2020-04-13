@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Nosotros Academia SI</title>
+<title>Acerca de Nosotros</title>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -20,21 +20,20 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<!-- LOGOTIPO -->
-		<a class="navbar-brand" href="">Soluciones Informáticas</a>
+		<a class="navbar-brand" th:href="@{/index}">Soluciones Informáticas</a>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<!-- menú del lado izquierdo -->
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active"><a class="nav-link"
-					th:href="@{/index}">Home<span class="sr-only">(current)</span></a>
+					th:href="@{/nosotros}">Nosotros</a></li>
+				<li class="nav-item active"><a class="nav-link" href="#">Eventos</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" th:href="@{/nosotros}">Nosotros</a>
-				</li>
-				<li class="nav-item"><a class="nav-link" href="#">Eventos</a></li>
 			</ul>
 
 			<!-- menú del lado derecho -->
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+				<li class="nav-item active"><a class="nav-link" href="#">Login</a>
+				</li>
 			</ul>
 		</div>
 	</nav>
