@@ -57,15 +57,15 @@
 			</thead>
 			<tbody>
 				<tr th:each="horario: ${horarios}">
-					<td th:text="${horarios.hora_inicio}"></td>
-					<td th:text="${horarios.hora_fin}"></td>
-					<td th:text="${horarios.curso}"></td>
-					<td th:text="${horarios.instructor}"></td>
+					<td th:text="${horario.horainicio}"></td>
+					<td th:text="${horario.horafin}"></td>
+					<td th:text="${horario.curso}"></td>
+					<td th:text="${horario.instructor}"></td>
 					<td><a class="btn btn-success btn-xs"
-						th:href="@{/form/} + ${cliente.id}" th:text="'Editar'"></a></td>
+						th:href="@{/form-horarios/} + ${horario.id}" th:text="'Editar'"></a></td>
 					<td><a class="btn btn-danger btn-xs"
-						th:href="@{/eliminar/} + ${cliente.id}" th:text="'Eliminar'"
-						onclick="return confirm('¿Estás seguro que quieres eliminar?;')"></a></td>
+						th:href="@{/eliminar/} + ${horario.id}" th:text="'Eliminar'"
+						onclick="return confirm('¿Estás seguro que quieres eliminar el Horario?;')"></a></td>
 				</tr>
 			</tbody>
 		</table>

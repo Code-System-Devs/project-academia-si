@@ -18,10 +18,10 @@ public class Horario implements Serializable{
 	private Long id;
 	
 	@NotEmpty
-	private String hora_inicio;
+	private String horainicio;
 	
 	@NotEmpty
-	private String hora_fin;
+	private String horafin;
 	
 	@NotEmpty
 	private String curso;
@@ -29,6 +29,8 @@ public class Horario implements Serializable{
 	@NotEmpty
 	private String instructor;
 
+
+	
 	public Long getId() {
 		return id;
 	}
@@ -37,20 +39,20 @@ public class Horario implements Serializable{
 		this.id = id;
 	}
 
-	public String getHora_inicio() {
-		return hora_inicio;
+	public String getHorainicio() {
+		return horainicio;
 	}
 
-	public void setHora_inicio(String hora_inicio) {
-		this.hora_inicio = hora_inicio;
+	public void setHorainicio(String horainicio) {
+		this.horainicio = horainicio;
 	}
 
-	public String getHora_fin() {
-		return hora_fin;
+	public String getHorafin() {
+		return horafin;
 	}
 
-	public void setHora_fin(String hora_fin) {
-		this.hora_fin = hora_fin;
+	public void setHorafin(String horafin) {
+		this.horafin = horafin;
 	}
 
 	public String getCurso() {
@@ -68,7 +70,7 @@ public class Horario implements Serializable{
 	public void setInstructor(String instructor) {
 		this.instructor = instructor;
 	}
-	
+
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}

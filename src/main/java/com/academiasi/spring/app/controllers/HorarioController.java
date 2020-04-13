@@ -19,19 +19,18 @@ import com.academiasi.spring.app.models.services.IHorarioService;
 
 @Controller
 @SessionAttributes("horario")
-public class HorariosIndex {
+public class HorarioController {
 	
 	@Autowired
 	private IHorarioService horarioService;
 	
-	@RequestMapping(value="/listar-horarios", method = RequestMethod.GET)
+	@RequestMapping(value="/horarios", method = RequestMethod.GET)
 	public String listar(Model model) {
-		model.addAttribute("titulo", "Horarios");
-		model.addAttribute("titulo1", "Horarios");
-		model.addAttribute("horarios", horarioService.findAll());
-		return "listar-horarios";
+		model.addAttribute("titulo","Horarios");
+		model.addAttribute("titulo1","Listado de Horarios Disponibles");
+		model.addAttribute("horarios",horarioService.findAll());
+		return "listarhorarios";
 	}
-	
 	
 	@RequestMapping(value="/form-horarios")
 	public String crear(Map<String, Object> model) {
@@ -50,7 +49,7 @@ public class HorariosIndex {
 		if(id>0) {
 			horario = horarioService.findOne(id);
 		} else {
-			return "redirect:/listar-horarios";
+			return "redirect:/listarhorarios";
 		}
 		model.put("horario", horario);
 		model.put("titulo","Editar Horario");
@@ -66,7 +65,7 @@ public class HorariosIndex {
 		
 		horarioService.save(horario);
 		status.setComplete();
-		return"redirect:listar-horarios";
+		return"redirect:listarhorarios";
 	}
 	
 	@RequestMapping(value="/eliminar/{id}")
@@ -76,8 +75,7 @@ public class HorariosIndex {
 			horarioService.delete(id);
 		}
 		
-		return "redirect:/listar-horarios";
+		return "redirect:/listarhorarios";
 	}
 
-	
 }
