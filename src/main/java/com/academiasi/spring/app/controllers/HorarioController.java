@@ -49,7 +49,7 @@ public class HorarioController {
 		if(id>0) {
 			horario = horarioService.findOne(id);
 		} else {
-			return "redirect:/listarhorarios";
+			return "redirect:/horarios";
 		}
 		model.put("horario", horario);
 		model.put("titulo","Editar Horario");
@@ -65,7 +65,7 @@ public class HorarioController {
 		
 		horarioService.save(horario);
 		status.setComplete();
-		return"redirect:listarhorarios";
+		return"redirect:horarios";
 	}
 	
 	@RequestMapping(value="/eliminar/{id}")
@@ -75,7 +75,7 @@ public class HorarioController {
 			horarioService.delete(id);
 		}
 		
-		return "redirect:/listarhorarios";
+		return "redirect:/horarios";
 	}
 
 }
