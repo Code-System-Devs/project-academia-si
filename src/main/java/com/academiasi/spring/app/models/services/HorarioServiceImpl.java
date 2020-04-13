@@ -24,21 +24,20 @@ public class HorarioServiceImpl implements IHorarioService{
 	@Override
 	@Transactional
 	public void save(Horario horario) {
-		// TODO Auto-generated method stub
+		horarioDao.save(horario);
 		
 	}
 
 	@Override
 	@Transactional(readOnly = true)
 	public Horario findOne(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return horarioDao.findById(id).orElse(null);
 	}
 
 	@Override
 	@Transactional
 	public void delete(Long id) {
-		// TODO Auto-generated method stub
+		horarioDao.deleteById(id);
 		
 	}
 	
