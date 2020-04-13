@@ -41,12 +41,12 @@
 			th:text="${titulo1}"></h1>
 		<!-- LINK PARA CREAR NUEVO HORARIO -->
 		<p>
-			<a class="btn btn-outline-success btn-xs" th:href="@{/form}">Crear
+			<a class="btn btn-outline-success btn-xs" th:href="@{/form-horarios}">Crear
 				Horario</a>
 		</p>
 		<table class="table table-striped table-bordered">
 			<thead class="bg-success">
-				<tr>
+				<tr align="center">
 					<th>ID</th>
 					<th>HORA DE INICIO</th>
 					<th>HORA DE FINALIZACIÓN</th>
@@ -57,7 +57,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="horario: ${horarios}">
+				<tr align="center" th:each="horario: ${horarios}">
 					<td th:text="${horario.id}"></td>
 					<td th:text="${horario.horainicio}"></td>
 					<td th:text="${horario.horafin}"></td>
