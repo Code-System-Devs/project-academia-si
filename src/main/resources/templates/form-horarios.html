@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${titulo}"></title>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+	<!-- menú -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarNav" aria-controls="navbarNav"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<!-- LOGOTIPO -->
+		<a class="navbar-brand" href="#">Soluciones Informáticas</a>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<!-- menú del lado izquierdo -->
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="#">Home<span
+						class="sr-only">(current)</span></a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Nosotros</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="#">Eventos</a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Alumnos</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- fin de menú -->
+
+
+
+	<div class="container">
+		<h1 th:text="${titulo}"
+			class="text-secondary border border-success border-top-0 border-left-0 border-right-0"></h1>
+
+		<div th:object="${horario}" th:remove="tag">
+			<ul th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+				<li th:each="err: ${#fields.errors('*')}" th:text="${err}"></li>
+			</ul>
+		</div>
+		<form th:action="@{/form-horarios}" th:object="${horario}" method="post">
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Hora de Inicio</label>
+				<div class="col-sm-6">
+					<input type="text" th:field="*{hora_inicio}" class="form-control"
+						th:errorclass="'form-control alert-danger'" /> <small
+						class="form-text text-danger"
+						th:if="${#fields.hasErrors('hora_inicio')}" th:errors="*{hora_inicio}"></small>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Hora de Finalización</label>
+				<div class="col-sm-6">
+					<input type="text" th:field="*{hora_fin}" class="form-control"
+						th:errorclass="'form-control alert-danger'" /> <small
+						class="form-text text-danger"
+						th:if="${#fields.hasErrors('hora_fin')}" th:errors="*{hora_fin}"></small>
+				</div>
+			</div>
+						<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Nombre del Curso</label>
+				<div class="col-sm-6">
+					<input type="text" th:field="*{curso}" class="form-control"
+						th:errorclass="'form-control alert-danger'" /> <small
+						class="form-text text-danger"
+						th:if="${#fields.hasErrors('curso')}" th:errors="*{curso}"></small>
+				</div>
+			</div>
+						<div class="form-group row">
+				<label class="col-sm-2 col-form-label">Nombre del Instructor</label>
+				<div class="col-sm-6">
+					<input type="text" th:field="*{instructor}" class="form-control"
+						th:errorclass="'form-control alert-danger'" /> <small
+						class="form-text text-danger"
+						th:if="${#fields.hasErrors('instructor')}" th:errors="*{instructor}"></small>
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col-sm-6">
+					<input type="submit" value="Crear Curso" class="btn btn-success" />
+				</div>
+			</div>
+		</form>
+	</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
