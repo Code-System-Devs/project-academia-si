@@ -79,10 +79,10 @@
 					<td><a class="btn btn-success btn-xs"
 						th:href="@{/form-alumnos/} + ${alumno.id}" th:text="'Editar'"></a></td>
 						
-<!-- Metodo eliminar sin funcionar -->
-					<!--<td><a class="btn btn-danger btn-xs"
-						th:href="@{/eliminar/} + ${h.id}" th:text="'Eliminar'"
-						onclick="return confirm('¿Estás seguro que quieres eliminar el alumno;')"></a></td> -->
+
+						<td><a class="btn btn-danger btn-xs"
+						th:href="@{/eliminar/} + ${alumno.id}" th:text="'Eliminar'"
+						onclick="return confirm('¿Estás seguro que quieres eliminar el alumno;')"></a></td>
 						
 				</tr>
 				
