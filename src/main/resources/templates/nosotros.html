@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<!-- Required meta tags -->
 <meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Acerca de Nosotros</title>
+<head>
+<!-- PROPIEDADES CSS -->
+<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</style>
+ 
+ <title>Acerca de Nosotros</title>
+<!-- FONDO -->
+<div id="wrapper">
+			<div id="bg"></div>
+			<div id="main">
+			<header  id="header">
 </head>
 <body>
 
@@ -19,7 +27,9 @@
 			aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<!-- LOGOTIPO -->
+		
+		
+
 		<a class="navbar-brand" th:href="@{/index}">Soluciones Informáticas</a>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<!-- menú del lado izquierdo -->
@@ -38,61 +48,35 @@
 		</div>
 	</nav>
 	<!-- fin de menú -->
+	
+	
 
-	<section class="container my-5 py-5">
-		<h1 class="text-uppercase text-center mb-4">Centro de Aprendizaje
-			de Teconologias de la Informacion y la Comunicacion "Soluciones
-			Informaticas"</h1>
+	<h1 ><span class="badge badge-primary">Centro de Aprendizaje
+			de Teconologias de la Informacion y la Comunicacion</span>
+			
+			 <span class="badge badge-secondary">"Soluciones
+			Informaticas"</span></h1>
+		
+<!--  CUADROS -->			
 
-		<div class="card-deck">
-			<div class="card">
-				<a href="#"><img class="card-img-top img-fluid"
-					src="images/a1.jpg" alt="Card image cap"></a>
-				<div class="card-block">
-					<h4 class="card-title">Vision</h4>
-					<p class="card-text">Ser un centro líder en cursos básico y
+
+<div class="card-group">
+  <div class="card">
+     <div class="card-body">
+      <h5 class="card-title">VISIÓN</h5>
+      <p class="card-text">Ser un centro líder en cursos básico y
 						libre de aprendizaje de tecnologías de la información y la
 						comunicación, sin fines de lucro, proporcionando una sólida
 						formación técnica, científica y humanística, base para la
 						realización personal y el desempeño en el estudio y en el trabajo
 						para el desarrollo de los pueblos.</p>
-					<!-- Modal 1 -->
-					<!-- Button trigger modal -->
-
-					<!-- Modal -->
-					<div class="modal fade" id="exampleModalLong" tabindex="-1"
-						role="dialog" aria-labelledby="exampleModalLongTitle"
-						aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLongTitle">Vision</h5>
-									<button type="button" class="close" data-dismiss="modal"
-										aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body"></div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary"
-										data-dismiss="modal">Cerrar</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Fin Modal 1 -->
-				</div>
-			</div>
-
-
-
-
-			<div class="card">
-				<a href="#"><img class="card-img-top img-fluid"
-					src="images/a2.jpg" alt="Card image cap"></a>
-				<div class="card-block">
-					<h4 class="card-title">Mision</h4>
-					<p class="card-text">Somos un Centro de Aprendizaje de
+     
+    </div>
+  </div>
+  <div class="card">
+       <div class="card-body">
+      <h5 class="card-title">MISION</h5>
+      <p class="card-text">Somos un Centro de Aprendizaje de
 						Tecnologías de la Información y la Comunicación, reconocidos por
 						la formación de niños, jóvenes y adultos, competentes y
 						habilidosos en la Computación, infundiendo el respeto y la
@@ -100,43 +84,12 @@
 						responsable de la libertad y el cumplimiento de las obligaciones,
 						superando los intereses individuales en la búsqueda del bien
 						común.</p>
-					<!-- Modal 1 -->
-					<!-- Button trigger modal -->
-
-					<!-- Modal -->
-					<div class="modal fade" id="exampleModalLong" tabindex="-1"
-						role="dialog" aria-labelledby="exampleModalLongTitle"
-						aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLongTitle">Mision</h5>
-									<button type="button" class="close" data-dismiss="modal"
-										aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body"></div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary"
-										data-dismiss="modal">Cerrar</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Fin Modal 1 -->
-				</div>
-			</div>
-
-
-
-
-			<div class="card">
-				<a href="#"><img class="card-img-top img-fluid"
-					src="images/a3.jpg" alt="Card image cap"></a>
-				<div class="card-block">
-					<h4 class="card-title">Descripcion</h4>
-					<p class="card-text">Según registros administrativos, fue
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">DESCRIPCIÓN</h5>
+      <p class="card-text">Según registros administrativos, fue
 						aperturado el centro con una inscripción de 10 hombres y 12
 						mujeres para un total de 22 inscritos cultivando en ellos los
 						valores tales como: la participación ciudadana, bien común,
@@ -147,44 +100,32 @@
 						Información y la Comunicación “Soluciones Informáticas”. Asimismo,
 						legalizar el nombre del propietario a nombre de Heber Adony
 						Martínez Alfaro.</p>
-					<!-- Modal 1 -->
-					<!-- Button trigger modal -->
+         </div>
+  </div>
+</div>
+					
 
-					<!-- Modal -->
-					<div class="modal fade" id="exampleModalLong" tabindex="-1"
-						role="dialog" aria-labelledby="exampleModalLongTitle"
-						aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalLongTitle">Descrpcion</h5>
-									<button type="button" class="close" data-dismiss="modal"
-										aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body"></div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary"
-										data-dismiss="modal">Cerrar</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Fin Modal 1 -->
-				</div>
-			</div>
-		</div>
+		<!-- FIN CUADROS -->			
+
 
 		<!-- Footer -->
 		<footer class="container-fluid bg-inverse">
 			<div class="row text-white py-4 text-white">
 				<div class="col-md-3">
 					<h4 class="lead">Soluciones Informaticas</h4>
-					<footer class="blockquote-footer">
-						<cite title="Source Title"></cite>
-					</footer>
-				</div>
+					<nav>
+		<ul>	<li><a href="https://www.facebook.com/SolucionesInformaticasSI/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								
+		</ul>
+				
+		</nav>
+					
+					
+		</div>
+		
+			
+				
+				
 				<div class="col-md-3">
 					<h4 class="lead">Direccion</h4>
 					<p>Cabecera Municipal, San Sebastian Huehuetenango</p>
@@ -200,6 +141,12 @@
 			</div>
 		</footer>
 		<!-- Fin Footer -->
+		
+		<script>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
 
 
 		<!-- jQuery first, then Tether, then Bootstrap JS. -->
