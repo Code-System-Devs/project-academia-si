@@ -53,6 +53,7 @@ public class HorarioController {
 		}
 		model.put("horario", horario);
 		model.put("titulo","Editar Horario");
+		model.put("titulo1","Formulario para los Horarios");
 		return "form-horarios";
 	}
 	
@@ -60,6 +61,7 @@ public class HorarioController {
 	public String guardar(@Valid Horario horario, BindingResult result, Model model, SessionStatus status) {
 		if(result.hasErrors()) {
 			model.addAttribute("titulo","Formulario de Horario");
+			model.addAttribute("titulo1","Formulario para los Horarios");
 			return"form-horarios";
 		}
 		
