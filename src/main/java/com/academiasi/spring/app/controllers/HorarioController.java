@@ -21,6 +21,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.academiasi.spring.app.models.entities.Horario;
 import com.academiasi.spring.app.models.services.IHorarioService;
+import com.academiasi.spring.app.util.paginator.PageRender;
 
 @Controller
 @SessionAttributes("horario")
@@ -37,9 +38,11 @@ public class HorarioController {
 		
 		Page<Horario> horarios = horarioService.findAll(pageRequest);
 		
+		PageRender<Horario> pageRender = new PageRender<Horario>("/horarios", horarios);
 		model.addAttribute("titulo","Horarios");
 		model.addAttribute("titulo1","Listado de Horarios Disponibles");
 		model.addAttribute("horarios", horarios);
+		model.addAttribute("page", pageRender);
 		return "listarhorarios";
 	}
 	
