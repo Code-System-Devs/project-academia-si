@@ -1,9 +1,9 @@
 package com.academiasi.spring.app.models.dao;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
 import com.academiasi.spring.app.models.entities.Horario;
 
-public interface IHorarioDao extends CrudRepository<Horario, Long>{
+public interface IHorarioDao extends PagingAndSortingRepository<Horario, Long>{
 
 }
