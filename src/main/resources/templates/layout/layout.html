@@ -19,8 +19,7 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<!-- LOGOTIPO -->
-		<a class="navbar-brand" th:href="@{/index}">Soluciones
-			Informáticas</a>
+		   <a class="navbar-brand" th:href="@{/index}"><img th:src="@{/images/logoSI.png}" alt="Academia Soluciones Informáticas" width="50"/></a>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<!-- menú del lado izquierdo -->
 			<ul class="navbar-nav mr-auto">
@@ -36,8 +35,15 @@
 
 			<!-- menú del lado derecho -->
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active"><a class="nav-link" href="#">Login</a>
-				</li>
+			
+			<li class="nav-item active">
+			<a class="navbar-brand" th:href="@{/index}"><img th:src="@{/images/login.png}" alt="Login" width="50"/></a>
+			</li>
+			<li class="nav-item active">
+			<a class="navbar-brand" th:href="@{/index}"><img th:src="@{/images/logout.png}" alt="Logout - Salir" width="50"/></a>
+			</li>
+			<!--  LOGIN EN FORMA DE BOTON
+			<li><a th:href="@{/login}"><button type="button" class="btn btn-light">Login</button></a> </li> -->
 			</ul>
 		</div>
 	</nav>
@@ -49,69 +55,140 @@
 	
 	</header>
 	<!-- fin de menú -->
+		
 
-	<div class="container"></div>
-
-
-
-	<!-- Footer -->
-	<footer th:fragment="footer" class="page-footer font-small special-color-dark pt-4">
-		<hr />
-		<img th:src="@{/images/logoSI.png}"
-			alt="Academia Soluciones Informáticas" />
-		<p>
-			Contáctanos: <a
-				href="https://www.facebook.com/AcademiaSolucionesInformaticas/">
-				Facebook</a>
-		</p>
-		<p></p>
+<!-- Footer -->
 
 
+<footer th:fragment="footer" class="page-footer font-small blue-grey lighten-5">
+<div style="background-color: #000000;">
+  <div style="background-color: #000000;">
+    <div class="container">
 
-		<!-- Footer Elements -->
-		<div class="container">
+      <!-- Grid row-->
+      <div class="row py-2 d-flex align-items-center">
 
-			<!-- Social buttons -->
-			<ul class="list-unstyled list-inline text-center">
-				<li class="list-inline-item"><a
-					class="btn-floating btn-fb mx-1"> <i class="fab fa-facebook-f">
-					</i>
-				</a></li>
-				<li class="list-inline-item"><a 
-					class="btn-floating btn-tw mx-1"> <i class="fab fa-twitter">
-					</i>
-				</a></li>
-				<li class="list-inline-item"><a
-					class="btn-floating btn-gplus mx-1"> <i
-						class="fab fa-google-plus-g"> </i>
-				</a></li>
-				<li class="list-inline-item"><a
-					class="btn-floating btn-li mx-1"> <i class="fab fa-linkedin-in">
-					</i>
-				</a></li>
-				<li class="list-inline-item"><a
-					class="btn-floating btn-dribbble mx-1"> <i
-						class="fab fa-dribbble"> </i>
-				</a></li>
-			</ul>
-			<!-- Social buttons -->
+        <!-- Grid column -->
+        <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0" style="color: #ffffff; font-family:pristina; font-size:23px;">Cursos de Computación ¡Plan Diario y Fin de Semana!</h6>
+        </div>
+        <!-- Grid column -->
 
-		</div>
-		<!-- Footer Elements -->
+      </div>
+      <!-- Grid row-->
 
-		<!-- Copyright -->
-		<div class="footer-copyright text-center py-3">
-			© 2020 Copyright: <a href="https://mdbootstrap.com/">
-				Soluciones Informáticas</a>
-		</div>
-		<!-- Copyright -->
+    </div>
+  </div>
+  </div>
+
+<div style="background-color: #ffffff;">
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row py-2 dark-grey-text">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-3 col-xl-2">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold" align="center" style="font-family:times;">ACADEMIA SOLUCIONES INFORMÁTICAS</h6>
+        
+        
+        <img th:src="@{/images/logoSI.png}"
+			alt="Academia Soluciones Informáticas" width="150"/>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold" align="center" style="font-family:times;">ENLACES</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 150px;">
+        <p>
+          <a class="dark-grey-text" href="#!">Acerca de Nosotros</a>
+        </p>
+        <p>
+          <a class="dark-grey-text"href="https://www.facebook.com/AcademiaSolucionesInformaticas">Facebook</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">Eventos</a>
+        </p>
 
 
-		<script th:src="@{/js/jquery-3.4.1.min.js}"></script>
-		<script th:src="@{/js/popper.min.js}"></script>
-		<script	th:src="@{/js/bootstrap.min.js}"></script>
+      </div>
+      <!-- Grid column -->
+      
+       <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
-	</footer>
-	<!-- Footer -->
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold" align="center" style="font-family:times;">CURSOS LIBRES</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 250px;">
+        <p>
+          <i class="fas fa-home mr-3"></i>- Operador de Computadoras</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i>Técnico en Computación</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i>- Reparación y Mantenimiento</p>
+        <p>
+          <i class="fas fa-print mr-3"></i>- Programacion</p>
+
+      </div>
+      <!-- Grid column -->
+      
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-6 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold" align="center" style="font-family:times;">CURSOS TIC's (Básico)</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 250px;">
+        <p>
+          <i class="fas fa-home"></i>- Primero Básico TIC I</p>
+        <p>
+          <i class="fas fa-home"></i>- Segundo Básico TIC II</p>
+        <p>
+          <i class="fas fa-phone"></i>- Tercero Básico TIC III</p>
+
+      </div>
+      <!-- Grid column -->
+      
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-6 col-xl-2 mx-auto mb-md-0 mb-2" style="background-color: #ffffff;">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold" align="center" style="font-family:times;">CONTACTOS</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 150px;">
+        <p>
+          <i class="fas fa-envelope mr-3"></i>catsolucionesinformaticas@gmail.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> +(502) 3039-3857</p>
+        <p>
+          <i class="fas fa-print mr-3"></i> +(502) 3165-7456</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center text-black-50 py-3">© 2020 Copyright:
+    <a class="dark-grey-text" href="https://www.facebook.com/AcademiaSolucionesInformaticas"> Academia Soluciones Informáticas</a>
+    <a class="dark-grey-text"> </a>
+  </div>
+  <!-- Copyright -->
+  </div>
+
+</footer>
+<!-- Footer -->
+
 </body>
 </html>

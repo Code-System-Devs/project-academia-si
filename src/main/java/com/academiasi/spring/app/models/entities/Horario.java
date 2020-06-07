@@ -30,7 +30,6 @@ public class Horario implements Serializable{
 	private String instructor;
 
 
-	
 	public Long getId() {
 		return id;
 	}
