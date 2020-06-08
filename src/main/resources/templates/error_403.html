@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layout/layout :: head"></head>
+<head>
+<meta charset="UTF-8" />
+<title>Error 403</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
 <body>
 
-	<header th:replace="layout/layout :: header"></header>
+ 	<header th:replace="layout/layout :: header"></header>
 
 	<div class="container py-4">
 
-		<div class="card bg-danger text-white">
-			<div class="card-header">Error: Acceso Denegado!</div>
+		<div class="card bg-danger text-white text-center">
+			<div class="card-header" style="font-size: 45px; font-family: Impact">¡Error: Acceso Denegado!</div>
 			<div class="card-body">
-				<h5 class="card-title">
-					Los sentimos <span th:text="${#authentication.name}"></span>,
-					NO tienes permisos para acceder a este recurso.
+				<h5 class="card-title" align="center" style="font-family: Century">
+					Lo Sentimos <span th:text="${#authentication.name}"></span>,
+					NO tienes permisos para Navegar en este sitio o Realizar esta acción...
 				</h5>
-				<a th:href="@{/}" class="btn btn-outline-light" role="button">Ir
-					al inicio</a>
+				<a th:href="@{/}" class="btn btn-outline-light" role="button">Regresar
+					al Inicio</a>
 
 			</div>
 		</div>
 	</div>
-
-	<footer th:replace="layout/layout :: footer"></footer>
 </body>
 </html>
