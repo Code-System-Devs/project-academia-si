@@ -20,7 +20,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class Alumno implements Serializable {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@NotEmpty
