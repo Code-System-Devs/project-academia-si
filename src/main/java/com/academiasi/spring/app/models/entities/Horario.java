@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
-@Table(name = "horarios")
+@Table(name = "horario")
 public class Horario implements Serializable{
 	
 	@Id
