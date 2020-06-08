@@ -4,41 +4,69 @@
 <meta charset="UTF-8" />
 <title>Index</title>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<style type="text/css">
+html, body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-image: url(https://lh3.googleusercontent.com/proxy/UkxTmlya4DdVbV_vDA4tyeTec3lkuINp64na_vCdatUBQDP8-5tWcT5zyoTrRD0aQaBN_Nerx8h_iy_lcMO893IH_-QN302mArPGtt8WP33J0GI6LFpGeB0Uh3gqyjTsxuL23XDxr54z3cGaZ96Dxg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+
+</style>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body>
 
- 	<header th:replace="layout/layout :: header"></header>
+	<header th:replace="layout/layout :: header"></header>
 
-<h1 align="center">¡Bienvenido!</h1>
+<div class="py-3">
+	<h1 align="center">
+		<span class="badge badge-success"><font size="70px">¡Bienvenido a Academia Soluciones Informáticas!</font></span>
+	</h1>
+	</div>
 
-<h1 align="center">Menú de Opciones</h1>
+	<h1 align="center">
+		<span class="badge badge-success"><font size="50px">Menú de Opciones:</font></span>
+	</h1>
 
+	<div class="card-deck border-primary" align="center">
+		<div class="card-body">
 
-	<!--menu de opciones -->
-	<div class="container">
-		<br>
-		<div class="btn-toolbar">
-			<div class="btn-group btn-group-justified btn-group-lg">
-				<a href="#" class="btn btn-warning btn-default"
-					style="font-family: Helvetica;">ALUMNOS</a> <a href="#"
-					class="btn btn-warning btn-default "
-					style="font-family: Helvetica;">CURSOS</a> <a href="/horarios"
-					class="btn btn-warning btn-default "
-					style="font-family: Helvetica;">HORARIOS</a>
+			<div class="form-group col-sm-4 ">
+
+				<div class="form-group col-sm-5" style="text-align: center">
+					<a href="/alumnos" class="btn btn-warning btn-default"
+						style="font-family: Helvetica;">ALUMNOS</a>
+				</div>
+
+				<div class="form-group col-sm-5" style="text-align: center">
+					<a href="/horarios" class="btn btn-warning btn-default"
+						style="font-family: Helvetica;">HORARIOS</a>
+				</div>
+
+				<div class="form-group col-sm-5" style="text-align: center">
+					<a href="/nosotros" class="btn btn-warning btn-default"
+						style="font-family: Helvetica;">NOSOTROS</a>
+				</div>
+
+				<div class="form-group col-sm-5" style="text-align: center">
+					<a href="/login" class="btn btn-warning btn-default"
+						style="font-family: Helvetica;">LOGIN</a>
+				</div>
+
 			</div>
 		</div>
-	<br>
-		<div class="btn-toolbar">
-			<div class="btn-group btn-group-justified btn-group-lg">
-				<a href="#" class="btn btn-warning btn-default"
-					style="font-family: Helvetica;">PAGOS</a> <a href="#"
-					class="btn btn-warning btn-default "
-					style="font-family: Helvetica;">ASIGNACIONES</a> <a href="/horarios"
-					class="btn btn-warning btn-default "
-					style="font-family: Helvetica;">OTRO</a>
-			</div>
-		</div>
+	</div>
+
+
+	<div class=" text-center py-3">
+		<img th:src="@{/images/portada.jpg}" alt="Login" width="1000" />
 	</div>
 
 
