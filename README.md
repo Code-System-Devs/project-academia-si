@@ -1,8 +1,8 @@
 # Proyecto para la Academia Soluciones Informáticas.
 
-## Actualmente solo funciona para la tabla horarios:
+## Actualmente solo funciona para la tabla horarios y alumnos:
 
-CREATE TABLE `db_prueba`.`horario`(  
+CREATE TABLE `academia`.`horario`(  
 `id` int (11) AUTO_INCREMENT,  
 `horainicio` varchar (150) DEFAULT NULL,  
 `horafin` varchar (150) DEFAULT NULL, 
@@ -10,6 +10,25 @@ CREATE TABLE `db_prueba`.`horario`(
 `instructor` varchar (150) DEFAULT NULL,
 PRIMARY KEY (`id`)
 );
+
+CREATE TABLE `academia`.`alumnos` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `apellido` VARCHAR(45) NULL,
+  `nombre` VARCHAR(45) NULL,
+  `telefono` VARCHAR(45) NULL,
+  `otro` VARCHAR(45) NULL,
+  `comunietica` VARCHAR(45) NULL,
+  `sexo` VARCHAR(45) NULL,
+  `fechanac` DATE NULL,
+  `lugarnac` VARCHAR(45) NULL,
+  `papependiente` VARCHAR(45) NULL,
+  `niveleducativo` VARCHAR(45) NULL,
+  `dpi` VARCHAR(45) NULL,
+  `extendida` VARCHAR(45) NULL,
+  `direccion` VARCHAR(45) NULL,
+  `municipio` VARCHAR(45) NULL,
+  `departamento` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
 
 ### Link para el script de la base de datos.
 
