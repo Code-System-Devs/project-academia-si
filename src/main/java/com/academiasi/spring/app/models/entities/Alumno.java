@@ -74,132 +74,132 @@ public class Alumno implements Serializable {
 		return id;
 	}
 
-	public String getApellido() {
-		return apellido;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public String getTelefono() {
-		return telefono;
-	}
-
-	public String getOtro() {
-		return otro;
-	}
-
-	public String getComunietica() {
-		return comunietica;
-	}
-
-	public String getSexo() {
-		return sexo;
-	}
-
-	public Date getFechanac() {
-		return fechanac;
-	}
-
-	public String getLugarnac() {
-		return lugarnac;
-	}
-
-	public String getPapependiente() {
-		return papependiente;
-	}
-
-	public String getNiveleducativo() {
-		return niveleducativo;
-	}
-
-	public String getDpi() {
-		return dpi;
-	}
-
-	public String getExtendida() {
-		return extendida;
-	}
-
-	public String getDireccion() {
-		return direccion;
-	}
-
-	public String getMunicipio() {
-		return municipio;
-	}
-
-	public String getDepartamento() {
-		return departamento;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getApellido() {
+		return apellido;
 	}
 
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
 
+	public String getNombre() {
+		return nombre;
+	}
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public String getTelefono() {
+		return telefono;
 	}
 
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
 
+	public String getOtro() {
+		return otro;
+	}
+
 	public void setOtro(String otro) {
 		this.otro = otro;
+	}
+
+	public String getComunietica() {
+		return comunietica;
 	}
 
 	public void setComunietica(String comunietica) {
 		this.comunietica = comunietica;
 	}
 
+	public String getSexo() {
+		return sexo;
+	}
+
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
+	}
+
+	public Date getFechanac() {
+		return fechanac;
 	}
 
 	public void setFechanac(Date fechanac) {
 		this.fechanac = fechanac;
 	}
 
+	public String getLugarnac() {
+		return lugarnac;
+	}
+
 	public void setLugarnac(String lugarnac) {
 		this.lugarnac = lugarnac;
+	}
+
+	public String getPapependiente() {
+		return papependiente;
 	}
 
 	public void setPapependiente(String papependiente) {
 		this.papependiente = papependiente;
 	}
 
+	public String getNiveleducativo() {
+		return niveleducativo;
+	}
+
 	public void setNiveleducativo(String niveleducativo) {
 		this.niveleducativo = niveleducativo;
+	}
+
+	public String getDpi() {
+		return dpi;
 	}
 
 	public void setDpi(String dpi) {
 		this.dpi = dpi;
 	}
 
+	public String getExtendida() {
+		return extendida;
+	}
+
 	public void setExtendida(String extendida) {
 		this.extendida = extendida;
+	}
+
+	public String getDireccion() {
+		return direccion;
 	}
 
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
 
+	public String getMunicipio() {
+		return municipio;
+	}
+
 	public void setMunicipio(String municipio) {
 		this.municipio = municipio;
 	}
 
+	public String getDepartamento() {
+		return departamento;
+	}
+
 	public void setDepartamento(String departamento) {
 		this.departamento = departamento;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
 	private static final long serialVersionUID = 1L;

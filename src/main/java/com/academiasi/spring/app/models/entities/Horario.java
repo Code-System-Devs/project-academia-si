@@ -11,24 +11,23 @@ import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "horario")
-public class Horario implements Serializable{
-	
+public class Horario implements Serializable {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
-	
+
 	@NotEmpty
 	private String horainicio;
-	
+
 	@NotEmpty
 	private String horafin;
-	
+
 	@NotEmpty
 	private String curso;
-	
+
 	@NotEmpty
 	private String instructor;
-
 
 	public Long getId() {
 		return id;
