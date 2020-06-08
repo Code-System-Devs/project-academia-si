@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
 <meta charset="UTF-8" />
 <title th:text="${titulo}"></title>
@@ -17,12 +17,12 @@
 	<div class="container py-4">
 
 		<div class="card bg-light">
-			<div class="card-header" th:text="${titulo1}"></div>
+			<div class="card-header text-center" th:text="${titulo1}"></div>
 			<div class="card-body">
 
 				<!-- LINK PARA CREAR NUEVO HORARIO -->
 				<h4 class="card-titlle">
-					<a class="btn btn-outline-success btn-xs"
+					<a sec:authorize="hasRole('ROLE_ADMIN')" class="btn btn-outline-success btn-xs"
 						th:href="@{/form-horarios}">Crear Horario</a>
 				</h4>
 				<table class="table table-striped table-bordered">
@@ -33,8 +33,8 @@
 							<th>HORA DE FINALIZACION</th>
 							<th>CURSO</th>
 							<th>INSTRUCTOR</th>
-							<th>Editar</th>
-							<th>Eliminar</th>
+							<th sec:authorize="hasRole('ROLE_ADMIN')">Editar</th>
+							<th sec:authorize="hasRole('ROLE_ADMIN')">Eliminar</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -44,9 +44,9 @@
 							<td th:text="${horario.horafin}"></td>
 							<td th:text="${horario.curso}"></td>
 							<td th:text="${horario.instructor}"></td>
-							<td><a class="btn btn-success btn-xs"
+							<td sec:authorize="hasRole('ROLE_ADMIN')"><a class="btn btn-success btn-xs"
 								th:href="@{/form-horarios/} + ${horario.id}" th:text="'Editar'"></a></td>
-							<td><a class="btn btn-danger btn-xs"
+							<td sec:authorize="hasRole('ROLE_ADMIN')"><a class="btn btn-danger btn-xs"
 								th:href="@{/eliminar/} + ${horario.id}" th:text="'Eliminar'"
 								onclick="return confirm('¿Estás seguro que quieres eliminar el Horario?;')"></a></td>
 						</tr>
