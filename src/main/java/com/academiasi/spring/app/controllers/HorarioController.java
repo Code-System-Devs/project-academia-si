@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -42,6 +44,9 @@ public class HorarioController {
 	@Autowired
 	private IHorarioService horarioService;
 	
+	/* ---------------------------------- */
+	/* LISTAR HORARIOS                    */
+	/* ---------------------------------- */
 	@RequestMapping(value="/horarios", method = RequestMethod.GET)
 	public String listar(@RequestParam(name="page", defaultValue = "0") int page, Model model,
 			Authentication authentication,
@@ -91,6 +96,10 @@ public class HorarioController {
 		return "listarhorarios";
 	}
 	
+	/* ---------------------------------- */
+	/* CREAR NUEVO HORARIO                */
+	/* ---------------------------------- */
+	@Secured("ROLE_ADMIN")
 	@RequestMapping(value="/form-horarios")
 	public String crear(Map<String, Object> model) {
 		
@@ -100,6 +109,10 @@ public class HorarioController {
 		return "form-horarios";
 	}
 	
+	/* ---------------------------------- */
+	/* EDITAR HORARIO                     */
+	/* ---------------------------------- */
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@RequestMapping(value="/form-horarios/{id}")
 	public String editar(@PathVariable(value="id") Long id, Map<String, Object> model, RedirectAttributes flash) {
 		
@@ -121,6 +134,10 @@ public class HorarioController {
 		return "form-horarios";
 	}
 	
+	/* ---------------------------------- */
+	/* GUARDAR HORARIO                    */
+	/* ---------------------------------- */
+	@Secured("ROLE_ADMIN")
 	@RequestMapping(value="/form-horarios", method=RequestMethod.POST)
 	public String guardar(@Valid Horario horario, BindingResult result, Model model, RedirectAttributes flash,SessionStatus status) {
 		
@@ -138,6 +155,10 @@ public class HorarioController {
 		return"redirect:horarios";
 	}
 	
+	/* ---------------------------------- */
+	/* ELIMINAR HORARIO                   */
+	/* ---------------------------------- */
+	@Secured("ROLE_ADMIN")
 	@RequestMapping(value="/eliminar/{id}")
 	public String eliminar(@PathVariable(value="id") Long id, RedirectAttributes flash) {
 		
