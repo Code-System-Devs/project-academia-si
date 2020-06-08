@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
 <meta charset="UTF-8" />
 <title>Listado de Alumnos</title>
@@ -18,7 +18,7 @@
 			</div>
 				<!-- LINK PARA CREAR NUEVO ALUMNO -->
 			<p>
-			<a class="btn btn-outline-success btn-xs" th:href="@{/form-alumnos}">Crear
+			<a sec:authorize="hasRole('ROLE_ADMIN')" class="btn btn-outline-success btn-xs" th:href="@{/form-alumnos}">Crear
 				Alumno</a>
 				</p>
 			</div>
@@ -32,9 +32,9 @@
 					<th>NOMBRE</th>
 					<th>DPI/CUI</th>
 					<th>DIRECCION</th>
-					<th>Ver</th>
-					<th>Editar</th>
-					<th>Eliminar</th>
+					<th sec:authorize="hasRole('ROLE_ADMIN')">Ver</th>
+					<th sec:authorize="hasRole('ROLE_ADMIN')">Editar</th>
+					<th sec:authorize="hasRole('ROLE_ADMIN')">Eliminar</th>
 				</tr>
 			</thead>
 	
@@ -46,14 +46,14 @@
 					<td th:text="${alumno.dpi}"></td>
 					<td th:text="${alumno.direccion}"></td>
 					
-					<td><a class="btn btn-primary btn-xs"
+					<td sec:authorize="hasRole('ROLE_ADMIN')"><a class="btn btn-primary btn-xs"
 						th:href="@{/form-alumnos/} + ${alumno.id}" th:text="'Ver'"></a></td>
 
-					<td><a class="btn btn-success btn-xs"
+					<td sec:authorize="hasRole('ROLE_ADMIN')"><a class="btn btn-success btn-xs"
 						th:href="@{/form-alumnos/} + ${alumno.id}" th:text="'Editar'"></a></td>
 						
 
-						<td><a class="btn btn-danger btn-xs"
+						<td sec:authorize="hasRole('ROLE_ADMIN')"><a class="btn btn-danger btn-xs"
 						th:href="@{/eliminar/} + ${alumno.id}" th:text="'Eliminar'"
 						onclick="return confirm('¿Estás seguro que quieres eliminar el alumno;')"></a></td>
 						

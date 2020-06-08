@@ -23,10 +23,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		
-		http.authorizeRequests().antMatchers("/","/css/**", "/js/**","/images/**", "/horarios","/eventos").permitAll()
+		http.authorizeRequests().antMatchers("/","/css/**", "/js/**","/images/**","/nosotros/", "/horarios","/eventos").permitAll()
 		/*.antMatchers("/form-horarios/**").hasAnyRole("ADMIN")
-		.antMatchers("/eliminar/**").hasAnyRole("ADMIN")*/
-		.antMatchers("/nosotros/").hasAnyRole("ADMIN")
+		.antMatchers("/eliminar/**").hasAnyRole("ADMIN")
+		.antMatchers().hasAnyRole("ADMIN")*/
 		.anyRequest().authenticated()
 		.and()
 			.formLogin()
@@ -52,9 +52,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 		UserBuilder users = User.builder().passwordEncoder(encoder::encode);
 		
 		builder.inMemoryAuthentication()
-		.withUser(users.username("admin").password("12345").roles("ADMIN", "USER"))
-		.withUser(users.username("david").password("12345").roles("ADMIN", "USER"))
-		.withUser(users.username("josue").password("12345").roles("USER"));
+		.withUser(users.username("Admin").password("12345").roles("ADMIN", "USER"))
+		.withUser(users.username("David").password("12345").roles("ADMIN", "USER"))
+		.withUser(users.username("Josue").password("12345").roles("USER"));
 	}
 
 }
