@@ -17,11 +17,6 @@ import com.academiasi.spring.app.auth.handler.LoginSuccessHandler;
 @EnableGlobalMethodSecurity(securedEnabled=true, prePostEnabled = true)
 @Configuration
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
-	
-	@Bean
-	public BCryptPasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
-	}
 
 	@Autowired
 	private LoginSuccessHandler successHandler;
@@ -44,6 +39,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 		.exceptionHandling().accessDeniedPage("/error_403");
 	}
 
+	@Bean
+	public BCryptPasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
 
 	@Autowired
 	public void configurerGlobal(AuthenticationManagerBuilder builder) throws Exception
