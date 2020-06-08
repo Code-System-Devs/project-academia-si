@@ -14,7 +14,7 @@ import javax.validation.constraints.NotEmpty;
 public class Horario implements Serializable{
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 	
 	@NotEmpty
