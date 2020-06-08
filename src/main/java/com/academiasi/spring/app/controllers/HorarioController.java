@@ -45,7 +45,8 @@ public class HorarioController {
 	private IHorarioService horarioService;
 	
 	/* ---------------------------------- */
-	/* LISTAR HORARIOS                    */
+	/* LISTAR HORARIOS                    
+	 * @Secured({"ROLE_ADMIN","ROLE_USER"}) agregar mas de un rol a una vista*/
 	/* ---------------------------------- */
 	@RequestMapping(value="/horarios", method = RequestMethod.GET)
 	public String listar(@RequestParam(name="page", defaultValue = "0") int page, Model model,
