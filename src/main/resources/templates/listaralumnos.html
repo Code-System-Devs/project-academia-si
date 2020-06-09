@@ -26,8 +26,7 @@
 		
 		<table class="table table-striped table-bordered">
 			<thead class="bg-success">
-				<tr align="center">
-					<th>ID</th>
+				<tr align="center">				
 					<th>APELLIDO</th>
 					<th>NOMBRE</th>
 					<th>DPI/CUI</th>
@@ -40,8 +39,7 @@
 	
 			<tbody>
 				<tr align="center" th:each="alumno: ${alumnos}">
-					<td th:text="${alumno.id}"></td>
-				 <td th:text="${alumno.apellido}"></td>
+					<td th:text="${alumno.apellido}"></td>
 					<td th:text="${alumno.nombre}"></td>
 					<td th:text="${alumno.dpi}"></td>
 					<td th:text="${alumno.direccion}"></td>

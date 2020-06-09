@@ -28,7 +28,6 @@
 				<table class="table table-striped table-bordered">
 					<thead class="bg-success">
 						<tr align="center">
-							<th>ID</th>
 							<th>HORA DE INICIO</th>
 							<th>HORA DE FINALIZACION</th>
 							<th>CURSO</th>
@@ -39,7 +38,6 @@
 					</thead>
 					<tbody>
 						<tr align="center" th:each="horario: ${horarios}">
-							<td th:text="${horario.id}"></td>
 							<td th:text="${horario.horainicio}"></td>
 							<td th:text="${horario.horafin}"></td>
 							<td th:text="${horario.curso}"></td>
